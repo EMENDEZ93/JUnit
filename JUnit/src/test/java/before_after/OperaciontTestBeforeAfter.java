@@ -6,13 +6,15 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
+import Operacion.Operacion;
+
 public class OperaciontTestBeforeAfter {
 
-	OperacionBeforeAfter operacionBeforeAfter; 
+	Operacion operacion; 
 	
 	@Before
 	public void before() {
-		operacionBeforeAfter = new OperacionBeforeAfter();	
+		operacion = new Operacion();	
 	}
 
 	
@@ -24,7 +26,7 @@ public class OperaciontTestBeforeAfter {
 		int b = 2;
 		
 		//act
-		int resultado = operacionBeforeAfter.add(a, b);
+		int resultado = operacion.suma(a, b);
 		
 		//assert
 		assertEquals(5, resultado);
